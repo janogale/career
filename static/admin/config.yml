@@ -1,0 +1,20 @@
+backend:
+  name: test-repo
+  #name: git-gateway
+  #branch: test-repo
+
+media_folder: static/img
+public_folder: /img
+
+collections:
+  - name: jobs
+    label: Jobs
+    folder: content/jobs
+    create: true
+    fields:
+      - { name: path, label: Path }
+      - { name: date, label: Date, widget: datetime }
+      - { name: title, label: Title }
+      - { name: image, label: Image, widget: image }
+      - { name: body, label: Body, widget: markdown }
+      - { name: draft, label: Draft, widget: boolean, default: false }
