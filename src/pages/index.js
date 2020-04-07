@@ -3,26 +3,29 @@ import { graphql } from "gatsby"
 
 import Layout from "../components/layout"
 import Hero from "../components/hero"
-import Body from "../components/body"
 import SEO from "../components/seo"
 import JobListing from "../components/job-listing"
 import HeroImg from "../svg/interview.svg"
 
-function Index ({
+function Index({
   data: {
     allMarkdownRemark: { edges }
   }
-})
-
-{
+}) {
   const posts = edges
-  .filter( edge => !!edge.node.frontmatter.date && edge.node.frontmatter.draft === false )
-  .map(edge => (
-      <div key={edge.node.id} className='mt-4 border rounded-lg shadow-md'>
-         <JobListing  post={edge.node} />
+    .filter(
+      edge =>
+        !!edge.node.frontmatter.date && edge.node.frontmatter.draft === false
+    )
+    .map(edge => (
+      <div
+        key={edge.node.id}
+        className="mt-4 bg-white border rounded-lg shadow-md"
+      >
+        <JobListing post={edge.node} />
       </div>
     ))
-    
+
   return (
     <Layout>
       <SEO title="Home" />
@@ -31,10 +34,10 @@ function Index ({
         image={<HeroImg />}
         cta={{ to: "/contact-us", text: "Find Jobs" }}
       />
-      <Body>
+      <div className="w-full md:w-4/5 mx-auto">
         <h2 className="mt-6">New jobs</h2>
         {posts}
-      </Body>
+      </div>
     </Layout>
   )
 }
@@ -60,8 +63,8 @@ export const pageQuery = graphql`
                 # Specify the image processing specifications right in the query.
                 # Makes it trivial to update as your page's design changes.
                 fluid(maxWidth: 2000) {
-          ...GatsbyImageSharpFluid
-        }
+                  ...GatsbyImageSharpFluid
+                }
               }
             }
           }
@@ -70,6 +73,5 @@ export const pageQuery = graphql`
     }
   }
 `
-
 
 export default Index
