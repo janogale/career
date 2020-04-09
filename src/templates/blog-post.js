@@ -16,7 +16,9 @@ export default function Template({ data, pageContext }) {
             posted on {frontmatter.postedAt}
           </h4>
           <div className="w-16 md:w-32 h-auto absolute top-0 right-0 mr-2 mt-4 md:m-0">
-            <Img fluid={frontmatter.image.childImageSharp.fluid} alt="logo" />
+            {frontmatter.image.childImageSharp && (
+              <Img fluid={frontmatter.image.childImageSharp.fluid} alt="logo" />
+            )}
           </div>
         </div>
         <span
