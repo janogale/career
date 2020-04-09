@@ -27,15 +27,13 @@ const IndexPage = () => (
       </p>
       <h3>General enquiries</h3>
       <a className="mt-4 inline-block" href="mailto:email@host.com">
-        email@host.com
+        info@somcareer.com
       </a>
-      <p className="mt-4 mb-0">An address,</p>
-      <p className="mt-0 mb-0">The Street,</p>
-      <p className="mt-0 mb-0">Town,</p>
-      <p className="mt-0 mb-0">County,</p>
-      <p className="mt-0 mb-0">POST COD</p>
+      <p className="mt-4 mb-0">Hargeisa</p>
+      <p className="mt-0 mb-0">Emiratul Khair Building</p>
+      <p className="mt-0 mb-0">Room 582</p>
       <h2>Where to find us</h2>
-      <img src={Map}  alt='our location'/>
+      <img src={Map} alt="our location" />
     </Body>
   </Layout>
 )

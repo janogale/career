@@ -14,31 +14,31 @@ const AboutPage = () => (
       image={<HeroImg />}
     />
     <Body>
-      <h1>About</h1>
+      <h1 className="font-bold text-teal-500">About Somcareer</h1>
       <p>
-        This starter brings together, Gatsby, TailwindCSS and NetlifyCMS to make
-        it simple to create a site with static generation, flexible styling and
-        dynamic posts driven by Markdown.
+        Somcareer com. was established in 2020, The basic services that the
+        company provides are the biggest services the company has preparedfor
+        the diverse community it serves, and it’s the best communication
+        services in the modern world. These services consist of four categories:
       </p>
-      <h3>Tailwind</h3>
+      <h3 className="font-bold text-teal-500">Services</h3>
       <p>
-        It provides a simple tailwind configuration which is responsive and easy
-        to either extend, or throw away and start over.
+        The company operates in entire Africa, where it has the widest coverage
+        network. somcareer has affiliation with neighboring country’s biggest
+        Job Platforms and also share regional and international connections.
       </p>
-      <h3>Netlify CMS</h3>
+      <h3 className="font-bold text-teal-500">Visson</h3>
+      <p>To be the leader in Job Platform in Africa.</p>
+      <h3 className="font-bold text-teal-500">Mission</h3>
       <p>
-        We include a Netlify configuration which allows you to use Netlify CMS
-        to generate posts with some straight-forward fields which are at their
-        heart just Markdown files hosted on Github.
-      </p>
-      <h3>Extras</h3>
-      <p>
-        It provide an implementation of the stack above with some added extras.
+        To enrich the lives of our community by providing highest quality and
+        affordable digital services through innovative technology and dedicated
+        workforce.
       </p>
       <ul>
-        <li>Netlify CMS configured for a simple blog / event list</li>
-        <li>A simple mobile first theme</li>
-        <li>SEO optimisation</li>
+        <li>easy to access job advertisement</li>
+        <li>Marketing Announements</li>
+        <li>Tenders and Bids Platform</li>
         <li>Self hosted Google fonts via typefaces</li>
         <li>SVG image imports</li>
         <li>Google analytics</li>
