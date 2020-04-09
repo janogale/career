@@ -1,5 +1,4 @@
 ---
-path: /jobs/senior-programe-officer
 date: 2020-01-02T09:00:00.000Z
 postedAt: 2020-04-05T09:00:00.000Z
 closingAt: 2020-04-15T09:00:00.000Z

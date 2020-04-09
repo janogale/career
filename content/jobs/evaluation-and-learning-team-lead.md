@@ -1,5 +1,4 @@
 ---
-path: /jobs/evaluation-and-learning-team-lead
 date: 2020-01-02T09:00:00.000Z
 postedAt: 2020-03-25T09:00:00.000Z
 closingAt: 2020-04-19T09:00:00.000Z

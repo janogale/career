@@ -2,8 +2,8 @@ backend:
   name: git-gateway
   branch: master
 site_url: https://somcareer.com
-media_folder: static/img
-public_folder: /img
+media_folder: content/assets
+public_folder: /assets
 
 collections:
   - name: jobs

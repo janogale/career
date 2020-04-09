@@ -7,6 +7,7 @@
 // You can delete this file if you're not using it
 
 const path = require(`path`)
+const slugify = require("slugify")
 
 exports.createPages = ({ actions, graphql }) => {
   const { createPage } = actions
@@ -21,8 +22,9 @@ exports.createPages = ({ actions, graphql }) => {
       ) {
         edges {
           node {
+            id
             frontmatter {
-              path
+              title
             }
           }
         }
@@ -35,9 +37,12 @@ exports.createPages = ({ actions, graphql }) => {
 
     return result.data.allMarkdownRemark.edges.forEach(({ node }) => {
       createPage({
-        path: node.frontmatter.path,
+        path: "/jobs/" + slugify(node.frontmatter.title.toLowerCase()),
         component: blogPostTemplate,
-        context: {} // additional data can be passed via context
+        context: {
+          slug: slugify(node.frontmatter.title.toLowerCase()),
+          id: node.id
+        } // additional data can be passed via context
       })
     })
   })

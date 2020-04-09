@@ -1,5 +1,4 @@
 ---
-path: /jobs/an-other-blog-post
 date: 2020-04-02T09:00:00.000Z
 postedAt: 2020-03-12T09:00:00.000Z
 closingAt: 2020-03-22T09:00:00.000Z

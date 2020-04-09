@@ -7,11 +7,11 @@ import SEO from "../components/seo"
 import JobListing from "../components/job-listing"
 import HeroImg from "../svg/interview.svg"
 
-function Index({
-  data: {
+function Index({ data }) {
+  const {
     allMarkdownRemark: { edges }
-  }
-}) {
+  } = data
+
   const posts = edges
     .filter(
       edge =>
@@ -56,7 +56,6 @@ export const pageQuery = graphql`
             closingAt(formatString: "DD-MMMM-YYYY", locale: "en-GB")
             postedAt(formatString: "DD-MMMM-YYYY", locale: "en-GB")
             date(formatString: "DD-MMMM-YYYY", locale: "en-GB")
-            path
             draft
             image {
               childImageSharp {

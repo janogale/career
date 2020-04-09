@@ -1,5 +1,4 @@
 ---
-path: /jobs/example-blog-post
 date: 2020-01-02T09:00:00.000Z
 postedAt: 2020-04-22T09:00:00.000Z
 closingAt: 2020-05-22T09:00:00.000Z
