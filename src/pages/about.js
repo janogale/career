@@ -4,13 +4,13 @@ import Layout from "../components/layout"
 import Body from "../components/body"
 import Hero from "../components/hero"
 import SEO from "../components/seo"
-import HeroImg from "../svg/undraw_mindfulness.svg"
+import HeroImg from "../svg/interview.svg"
 
 const AboutPage = () => (
   <Layout>
     <SEO title="About" />
     <Hero
-      text="Find out more about the starter and what it offers"
+      text="Find out more about Somcareer and what we offers"
       image={<HeroImg />}
     />
     <Body>

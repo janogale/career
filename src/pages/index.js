@@ -2,10 +2,8 @@ import React from "react"
 import { graphql } from "gatsby"
 
 import Layout from "../components/layout"
-import Hero from "../components/hero"
 import SEO from "../components/seo"
 import JobListing from "../components/job-listing"
-import HeroImg from "../svg/interview.svg"
 
 function Index({ data }) {
   const {
@@ -20,7 +18,7 @@ function Index({ data }) {
     .map(edge => (
       <div
         key={edge.node.id}
-        className="mt-4 bg-white border rounded-lg shadow-md"
+        className="mt-4 bg-white hover:bg-gray-100 border rounded-lg shadow hover:shadow-lg"
       >
         <JobListing post={edge.node} />
       </div>
@@ -29,13 +27,13 @@ function Index({ data }) {
   return (
     <Layout>
       <SEO title="Home" />
-      <Hero
+      {/* <Hero
         text="Find Jobs in the Somali Region and Horn of Africa"
         image={<HeroImg />}
         cta={{ to: "/contact-us", text: "Find Jobs" }}
-      />
-      <div className="w-full md:w-4/5 mx-auto">
-        <h2 className="mt-6">New jobs</h2>
+      /> */}
+      <div className="w-full sm:w-4/6 mx-auto">
+        <h2 className="mt-6 text-center">New jobs</h2>
         {posts}
       </div>
     </Layout>

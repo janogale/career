@@ -12,7 +12,7 @@ const slugify = require("slugify")
 exports.createPages = ({ actions, graphql }) => {
   const { createPage } = actions
 
-  const blogPostTemplate = path.resolve(`src/templates/blog-post.js`)
+  const blogPostTemplate = path.resolve(`src/templates/job-post.js`)
 
   return graphql(`
     {

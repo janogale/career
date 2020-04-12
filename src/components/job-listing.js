@@ -2,7 +2,6 @@ import React from "react"
 import { Link } from "gatsby"
 import Img from "gatsby-image"
 import Marker from "../svg/marker.svg"
-import { Box, Text } from "@chakra-ui/core"
 
 import slugify from "slugify"
 
@@ -12,35 +11,26 @@ const PostLink = ({ post: { excerpt, frontmatter } }) => {
   const slug = slugify(frontmatter.title.toLowerCase())
 
   return (
-    <Link
-      to={`/jobs/${slug}`}
-      className="no-underline hover:no-underline hover:bg-gray-200"
-    >
-      <Box p={2} display={{ md: "flex" }}>
-        <Box flexShrink="0" width={["20%", "10%", "8%"]}>
-          {image && <Img fluid={image} alt="logo" />}
-        </Box>
-
-        <Box mt={{ base: 4, md: 0 }} ml="4">
-          <Text
-            fontWeight="bold"
-            textTransform="uppercase"
-            fontSize="sm"
-            letterSpacing="wide"
-            className="text-teal-500"
-          >
-            {frontmatter.title}
-          </Text>
-          <div className="flex flex-col md:flex-row md:mb-6">
-            <div className="flex mb-4 md:mb-0">
-              <Marker className="h-5 mr-3 text-green-300" />
-              <span className="">{frontmatter.organization}</span>
-              <span className="ml-12">{frontmatter.city}</span>
+    <Link to={`/jobs/${slug}`} className="no-underline hover:no-underline">
+      <div className="mx-4 my-6">
+        <div>
+          <div className="flex justify-start items-center mb-4">
+            <div className="h-16 w-24">
+              {image && <Img fluid={image} alt="logo" />}
+            </div>
+            <div className="flex flex-col pl-4  justify-start items-baseline">
+              <div className="text-teal-500 pb-2 text-m leading-tight font-semibold">
+                {frontmatter.title}
+              </div>
+              <div className="flex flex-col sm:flex-row mb-4 md:mb-0">
+                <Marker className="hidden sm:block h-5 mr-3 text-green-300" />
+                <span className="">{frontmatter.organization}</span>
+                <span className="sm:ml-12">{frontmatter.city}</span>
+              </div>
             </div>
           </div>
-          <Text mt={2} color="gray.500">
-            {excerpt}
-          </Text>
+
+          <p>{excerpt}</p>
           <div className="flex flex-col md:flex-row">
             <span className="font-light  md:bg-gray-100 px-3 py-1 rounded-full text-gray-600 mb-2 ">
               posted: {frontmatter.postedAt}
@@ -49,8 +39,8 @@ const PostLink = ({ post: { excerpt, frontmatter } }) => {
               closing: {frontmatter.closingAt}
             </span>
           </div>
-        </Box>
-      </Box>
+        </div>
+      </div>
     </Link>
   )
 }
