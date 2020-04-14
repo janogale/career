@@ -1,4 +1,3 @@
-import React from "react"
 /**
  * Implement Gatsby's Browser APIs in this file.
  *
@@ -18,14 +17,3 @@ import "./src/utils/base-styles.css"
 // custom typefaces
 import "typeface-roboto"
 import "typeface-roboto-slab"
-
-import { ThemeProvider, ColorModeProvider } from "@chakra-ui/core"
-import customTheme from "./theme"
-
-export const wrapRootElement = ({ element }) => {
-  return (
-    <ThemeProvider theme={customTheme}>
-      <ColorModeProvider>{element}</ColorModeProvider>
-    </ThemeProvider>
-  )
-}

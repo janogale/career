@@ -13,7 +13,7 @@ export default function Template({ data, pageContext }) {
   const image = frontmatter?.image?.childImageSharp?.fluid
   return (
     <Layout>
-      <div className=" w-full md:w-4/6 mx-auto bg-gray-100 mt-10 p-4 md:p-8 rounded-lg">
+      <div className=" w-full md:w-4/6 mx-auto bg-gray-100 mt-10  md:p-8 rounded-lg">
         <Link
           to="/"
           className="flex items-center text-gray-500 bg-gray-200 hover:no-underline w-32 rounded-lg px-3"
@@ -24,7 +24,7 @@ export default function Template({ data, pageContext }) {
           <div className="w-16 sm:w-32 mt-3 md:mt-0">
             {image && <Img fluid={image} alt="logo" />}
           </div>
-          <div className="flex flex-col pl-4  justify-start items-baseline">
+          <div className="flex flex-1 flex-col pl-4  justify-start items-baseline">
             <div className="text-teal-500 pb-2 text-xl leading-tight font-semibold">
               {frontmatter.title}
             </div>
@@ -40,7 +40,7 @@ export default function Template({ data, pageContext }) {
               <span className="font-light text-tertiary bg-gray-200 px-3 py-1 rounded-full  mb-2 md:ml-12">
                 closing: {frontmatter.closingAt}
               </span>
-              <span className="absolute right-0 mr-32 font-semibold text-white  bg-green-600 px-3 rounded-full">
+              <span className="absolute right-0 mr-2 font-semibold text-white  bg-green-600 px-3 rounded-full">
                 New
               </span>
               {/* <span className="absolute right-0 mr-12 font-light font-semibold text-tertiary bg-red-200 px-3 py-1  rounded-full">

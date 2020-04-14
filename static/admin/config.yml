@@ -2,7 +2,7 @@ backend:
   name: git-gateway
   branch: master
 site_url: https://somcareer.netlify.com
-logo_url: ../static/somcareer-icon.png
+logo_url: /images/somcareer-icon.png
 media_folder: content/assets
 public_folder: ../assets
 

@@ -39,9 +39,6 @@ const AboutPage = () => (
         <li>easy to access job advertisement</li>
         <li>Marketing Announements</li>
         <li>Tenders and Bids Platform</li>
-        <li>Self hosted Google fonts via typefaces</li>
-        <li>SVG image imports</li>
-        <li>Google analytics</li>
       </ul>
     </Body>
   </Layout>

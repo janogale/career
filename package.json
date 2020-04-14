@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-tailwind-netlify-cms-starter",
+  "name": "somcareer-job-site",
   "private": true,
-  "description": "A starter to get you going with tailwind, netlify cms and sensible utilities like SEO optimisation",
+  "description": "Somcareer Job Board for Somali People",
   "version": "0.1.0",
-  "author": "Doug McDonald <dougajmcdonald@gmail.com>",
+  "author": "Mukhtar Janagale <@mmjanagale",
   "dependencies": {
     "@chakra-ui/core": "^0.7.0",
     "@emotion/core": "^10.0.28",
