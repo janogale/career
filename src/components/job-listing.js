@@ -14,18 +14,21 @@ const PostLink = ({ post: { excerpt, frontmatter } }) => {
     <Link to={`/jobs/${slug}`} className="no-underline hover:no-underline">
       <div className="mx-4 my-6">
         <div>
-          <div className="flex justify-start items-center mb-4">
+          <div className="flex flex-1   relative justify-start items-center mb-4">
             <div className="h-16 w-24">
               {image && <Img fluid={image} alt="logo" />}
             </div>
-            <div className="flex flex-col pl-4  justify-start items-baseline">
+            <div className="flex flex-1  flex-col  pl-4  justify-start items-baseline">
               <div className="text-teal-500 pb-2 text-m leading-tight font-semibold">
                 {frontmatter.title}
               </div>
-              <div className="flex flex-col sm:flex-row mb-4 md:mb-0">
+              <div className="flex flex-1   flex-col sm:flex-row mb-4 md:mb-0">
                 <Marker className="hidden sm:block h-5 mr-3 text-green-300" />
                 <span className="">{frontmatter.organization}</span>
                 <span className="sm:ml-12">{frontmatter.city}</span>
+                <span className="absolute right-0 -mr-3 sm:mr-0 font-semibold text-s text-white  bg-green-600 px-2 rounded-full">
+                  New
+                </span>
               </div>
             </div>
           </div>

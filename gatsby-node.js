@@ -17,7 +17,7 @@ exports.createPages = ({ actions, graphql }) => {
   return graphql(`
     {
       allMarkdownRemark(
-        sort: { order: DESC, fields: [frontmatter___date] }
+        sort: { order: ASC, fields: [frontmatter___date] }
         limit: 1000
       ) {
         edges {
@@ -35,15 +35,30 @@ exports.createPages = ({ actions, graphql }) => {
       return Promise.reject(result.errors)
     }
 
-    return result.data.allMarkdownRemark.edges.forEach(({ node }) => {
+    const edges = result.data.allMarkdownRemark.edges
+
+    const jobs = edges.forEach(({ node }, index) => {
+      // getting pagination links
+      const prev = edges[index - 1]
+        ? slugify(edges[index - 1].node.frontmatter.title.toLowerCase())
+        : null
+
+      const next = edges[index + 1]
+        ? slugify(edges[index + 1].node.frontmatter.title.toLowerCase())
+        : null
+
       createPage({
         path: "/jobs/" + slugify(node.frontmatter.title.toLowerCase()),
         component: blogPostTemplate,
         context: {
+          prev,
+          next,
           slug: slugify(node.frontmatter.title.toLowerCase()),
           id: node.id
         } // additional data can be passed via context
       })
     })
+
+    return jobs
   })
 }

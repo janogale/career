@@ -11,6 +11,7 @@ export default function Template({ data, pageContext }) {
   const { markdownRemark } = data // data.markdownRemark holds your post data
   const { frontmatter, html } = markdownRemark
   const image = frontmatter?.image?.childImageSharp?.fluid
+  const { prev, next } = pageContext
   return (
     <Layout>
       <div className=" w-full md:w-4/6 mx-auto bg-gray-100 mt-10  md:p-8 rounded-lg">
@@ -62,18 +63,22 @@ export default function Template({ data, pageContext }) {
           style={{ height: `1px`, width: `80%` }}
         ></span>
         <div className="flex justify-between">
-          <Link
-            to="/"
-            className="flex mt-16 items-center text-gray-500 bg-gray-200 hover:no-underline hover:bg-gray-300 w-32 rounded-lg px-3"
-          >
-            <BackArrow className="h-8 mr-2 text-gray-500" /> Prev
-          </Link>
-          <Link
-            to="/"
-            className="flex mt-16 items-center text-gray-500 bg-gray-200 hover:no-underline hover:bg-gray-300 w-32 rounded-lg px-3"
-          >
-            Next <NextArrow className="h-8 ml-2 text-gray-500" />
-          </Link>
+          {prev && (
+            <Link
+              to={`jobs/${prev}`}
+              className="flex mt-16 items-center text-gray-500 bg-gray-200 hover:no-underline hover:bg-gray-300 w-32 rounded-lg px-3"
+            >
+              <BackArrow className="h-8 mr-2 text-gray-500" /> Prev
+            </Link>
+          )}
+          {next && (
+            <Link
+              to={`jobs/${next}`}
+              className="flex mt-16 items-center text-gray-500 bg-gray-200 hover:no-underline hover:bg-gray-300 w-32 rounded-lg px-3"
+            >
+              Next <NextArrow className="h-8 ml-2 text-gray-500" />
+            </Link>
+          )}
         </div>
       </div>
     </Layout>
