@@ -14,7 +14,7 @@ export default function Template({ data, pageContext }) {
   const { prev, next } = pageContext
   return (
     <Layout>
-      <div className=" w-full md:w-4/6 mx-auto bg-gray-100 mt-10  md:p-8 rounded-lg">
+      <div className=" w-full md:w-4/6 mx-auto bg-gray-100 px-3 sm:px-0 py-10 mt-10  md:p-8 rounded-lg">
         <Link
           to="/"
           className="flex items-center text-gray-500 bg-gray-200 hover:no-underline w-32 rounded-lg px-3"
