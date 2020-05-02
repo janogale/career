@@ -6,6 +6,7 @@ organization: Alight
 postedAt: 2020-04-06 12:00
 closingAt: 2020-05-30 12:00
 image: ../assets/alight-logo.png
+tags: ["mogadishu", "berbera"]
 draft: false
 ---
 <!--StartFragment-->

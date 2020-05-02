@@ -5,6 +5,7 @@ city: Berbera
 organization: IOM
 postedAt: 2020-04-02 12:00
 closingAt: 2020-03-15 12:00
+tags: ["hargeisa", "berbera"]
 image: ../assets/iom-logo.png
 draft: false
 ---

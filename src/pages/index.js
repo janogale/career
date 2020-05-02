@@ -1,5 +1,7 @@
 import React from "react"
-import { graphql } from "gatsby"
+import { graphql, Link } from "gatsby"
+
+import kebabCase from "slugify"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -7,8 +9,11 @@ import JobListing from "../components/job-listing"
 
 function Index({ data }) {
   const {
-    allMarkdownRemark: { edges }
+    allMarkdownRemark: { edges },
+    cities: { group }
   } = data
+
+  console.log(group)
 
   const posts = edges
     .filter(
@@ -33,7 +38,23 @@ function Index({ data }) {
         cta={{ to: "/contact-us", text: "Find Jobs" }}
       /> */}
       <div className="w-full sm:w-4/6 mx-auto">
-        <h2 className="mt-6 text-center">New jobs</h2>
+        <div className=" mb-8">
+          <ul className="flex justify-around">
+            {group.map(tag => (
+              <li
+                key={tag.fieldValue}
+                className="border-none bg-gray-300 px-3 rounded-lg "
+              >
+                <Link
+                  to={`/tags/${kebabCase(tag.fieldValue)}/`}
+                  className="no-underline hover:text-white text-teal-500 "
+                >
+                  {tag.fieldValue} ({tag.totalCount})
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
         {posts}
       </div>
     </Layout>
@@ -66,6 +87,12 @@ export const pageQuery = graphql`
             }
           }
         }
+      }
+    }
+    cities: allMarkdownRemark(limit: 2000) {
+      group(field: frontmatter___tags) {
+        fieldValue
+        totalCount
       }
     }
   }

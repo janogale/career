@@ -6,6 +6,7 @@ image: ../assets/iom-logo.png
 organization: UNDP
 title: Senior Program Officer
 city: Berbera
+tags: ["berbera"]
 draft: false
 ---
 

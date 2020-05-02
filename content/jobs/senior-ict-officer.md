@@ -6,6 +6,7 @@ image: ../assets/undp-logo.png
 title: Senior ICT Officer
 organization: IOM UN Migration
 city: Hargeisa
+tags: ["hargeisa"]
 draft: false
 ---
 

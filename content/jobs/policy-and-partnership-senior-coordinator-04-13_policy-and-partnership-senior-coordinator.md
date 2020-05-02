@@ -6,6 +6,7 @@ organization: Creative
 postedAt: 2020-04-01 11:14
 closingAt: 2020-05-01 11:14
 image: ../assets/creative-logo.jpg
+tags: ["hargeisa", "mogadishu"]
 draft: false
 ---
 <!--StartFragment-->

@@ -1,22 +1,15 @@
-/**
- * Implement Gatsby's Node APIs in this file.
- *
- * See: https://www.gatsbyjs.org/docs/node-apis/
- */
-
-// You can delete this file if you're not using it
-
 const path = require(`path`)
 const slugify = require("slugify")
 
-exports.createPages = ({ actions, graphql }) => {
+exports.createPages = async ({ actions, graphql }) => {
   const { createPage } = actions
 
   const blogPostTemplate = path.resolve(`src/templates/job-post.js`)
+  const tagsTemplate = path.resolve(`src/templates/tag.js`)
 
-  return graphql(`
+  const result = await graphql(`
     {
-      allMarkdownRemark(
+      jobs: allMarkdownRemark(
         sort: { order: ASC, fields: [frontmatter___date] }
         limit: 1000
       ) {
@@ -29,36 +22,54 @@ exports.createPages = ({ actions, graphql }) => {
           }
         }
       }
+      tagsGroup: allMarkdownRemark(limit: 2000) {
+        group(field: frontmatter___tags) {
+          fieldValue
+        }
+      }
     }
-  `).then(result => {
-    if (result.errors) {
-      return Promise.reject(result.errors)
-    }
+  `)
 
-    const edges = result.data.allMarkdownRemark.edges
+  // handle Errors
+  if (result.errors) {
+    return Promise.reject(result.errors)
+  }
 
-    const jobs = edges.forEach(({ node }, index) => {
-      // getting pagination links
-      const prev = edges[index - 1]
-        ? slugify(edges[index - 1].node.frontmatter.title.toLowerCase())
-        : null
+  // Create Jobs
+  const edges = result.data.jobs.edges
 
-      const next = edges[index + 1]
-        ? slugify(edges[index + 1].node.frontmatter.title.toLowerCase())
-        : null
+  const jobs = edges.forEach(({ node }, index) => {
+    // getting pagination links
+    const prev = edges[index - 1]
+      ? slugify(edges[index - 1].node.frontmatter.title.toLowerCase())
+      : null
 
-      createPage({
-        path: "/jobs/" + slugify(node.frontmatter.title.toLowerCase()),
-        component: blogPostTemplate,
-        context: {
-          prev,
-          next,
-          slug: slugify(node.frontmatter.title.toLowerCase()),
-          id: node.id
-        } // additional data can be passed via context
-      })
+    const next = edges[index + 1]
+      ? slugify(edges[index + 1].node.frontmatter.title.toLowerCase())
+      : null
+
+    createPage({
+      path: "/jobs/" + slugify(node.frontmatter.title.toLowerCase()),
+      component: blogPostTemplate,
+      context: {
+        prev,
+        next,
+        slug: slugify(node.frontmatter.title.toLowerCase()),
+        id: node.id
+      } // additional data can be passed via context
     })
+  })
 
-    return jobs
+  // Create Cities.
+  const tagEdges = result.data.tagsGroup.group
+
+  const tags = tagEdges.forEach(tag => {
+    createPage({
+      path: "/tags/" + slugify(tag.fieldValue.toLowerCase()),
+      component: tagsTemplate,
+      context: {
+        tag: tag.fieldValue
+      }
+    })
   })
 }

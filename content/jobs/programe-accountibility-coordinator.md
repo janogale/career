@@ -6,6 +6,7 @@ organization: KIMS Microfinance
 postedAt: "2020-04-08 16:54"
 closingAt: "2020-04-08 16:54"
 image: ../assets/telesom-logo.png
+tags: ["hargeisa", "berbera"]
 draft: false
 ---
 

@@ -5,6 +5,7 @@ closingAt: 2020-04-19T09:00:00.000Z
 image: ../assets/psi-logo.png
 title: Monitoring, Evaluation, and Learning Team Leader
 organization: PSI International
+tags: ["mogadishu", "bosaso"]
 city: Bosaso
 draft: false
 ---
