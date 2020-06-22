@@ -5,7 +5,7 @@ city: Hargeisa
 organization: Mott MacDonald
 postedAt: 2020-06-11 10:56
 closingAt: 2020-06-25 16:00
-image: ../assets/mott-20macdonald.png
+image: ../assets/mott-macdonald.png
 draft: false
 ---
 **Mott MacDonald Project Office**\
