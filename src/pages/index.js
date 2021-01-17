@@ -13,8 +13,6 @@ function Index({ data }) {
     cities: { group }
   } = data
 
-  console.log(group)
-
   const posts = edges
     .filter(
       edge =>
@@ -47,9 +45,9 @@ function Index({ data }) {
               >
                 <Link
                   to={`/tags/${kebabCase(tag.fieldValue)}/`}
-                  className="no-underline hover:text-white text-teal-500 "
+                  className="no-underline hover:text-gray-700 text-teal-500 "
                 >
-                  {tag.fieldValue} ({tag.totalCount})
+                  {capitalize(tag.fieldValue)} ({tag.totalCount})
                 </Link>
               </li>
             ))}
@@ -59,6 +57,14 @@ function Index({ data }) {
       </div>
     </Layout>
   )
+}
+
+// capitalize first letter
+
+function capitalize(str) {
+  if (str && typeof str === "string" && str.length > 2) {
+    return str[0].toUpperCase() + str.slice(1).toLowerCase()
+  }
 }
 
 export const pageQuery = graphql`

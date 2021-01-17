@@ -3,7 +3,7 @@
   "private": true,
   "description": "Somcareer Job Board for Somali People",
   "version": "0.1.0",
-  "author": "Mukhtar Janagale <@mmjanagale",
+  "author": "Mukhtar Janagale @mmjanagale",
   "dependencies": {
     "@chakra-ui/core": "^0.7.0",
     "@emotion/core": "^10.0.28",

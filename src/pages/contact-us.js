@@ -12,7 +12,7 @@ const IndexPage = () => (
   <Layout>
     <SEO title="Contact Us" />
     <Hero
-      text="We're on hand to answers your queries and listen to your feedback"
+      text="We're on hand to answer your queries and listen to your feedback"
       image={<HeroImg />}
     />
     <Body>
@@ -31,7 +31,11 @@ const IndexPage = () => (
       </a>
       <p className="mt-4 mb-0">Hargeisa</p>
       <p className="mt-0 mb-0">Emiratul Khair Building</p>
-      <p className="mt-0 mb-0">Room 582</p>
+      <p className="mt-2 mb-0">
+        <a href="tel:0633330190">
+          Call us at <strong>063-3330190</strong>
+        </a>
+      </p>
       <h2>Where to find us</h2>
       <img src={Map} alt="our location" />
     </Body>
