@@ -32,8 +32,8 @@ const IndexPage = () => (
       <p className="mt-4 mb-0">Hargeisa</p>
       <p className="mt-0 mb-0">Emiratul Khair Building</p>
       <p className="mt-2 mb-0">
-        <a href="tel:0633330190">
-          Call us at <strong>063-3330190</strong>
+        <a href="tel:0633333655">
+          Call us at <strong>063-3333655</strong>
         </a>
       </p>
       <h2>Where to find us</h2>
