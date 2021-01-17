@@ -44,7 +44,7 @@ export default function Template({ data, pageContext }) {
               <span className="absolute right-0 mr-2 font-semibold text-white  bg-green-600 px-3 rounded-full">
                 New
               </span>
-              {/* <span className="absolute right-0 mr-12 font-light font-semibold text-tertiary bg-red-200 px-3 py-1  rounded-full">
+              {/* <span className="absolute right-0 mr-12 font-semibold text-tertiary bg-red-200 px-3 py-1  rounded-full">
                 expired
               </span> */}
             </div>
