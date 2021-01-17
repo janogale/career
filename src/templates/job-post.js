@@ -65,7 +65,7 @@ export default function Template({ data, pageContext }) {
         <div className="flex justify-between">
           {prev && (
             <Link
-              to={`jobs/${prev}`}
+              to={`/jobs/${prev}/`}
               className="flex mt-16 items-center text-gray-500 bg-gray-200 hover:no-underline hover:bg-gray-300 w-32 rounded-lg px-3"
             >
               <BackArrow className="h-8 mr-2 text-gray-500" /> Prev
@@ -73,7 +73,7 @@ export default function Template({ data, pageContext }) {
           )}
           {next && (
             <Link
-              to={`jobs/${next}`}
+              to={`/jobs/${next}/`}
               className="flex mt-16 items-center text-gray-500 bg-gray-200 hover:no-underline hover:bg-gray-300 w-32 rounded-lg px-3"
             >
               Next <NextArrow className="h-8 ml-2 text-gray-500" />
