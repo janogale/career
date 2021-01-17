@@ -1,13 +1,15 @@
 ---
 date: 2020-01-02T09:00:00.000Z
+title: Monitoring, Evaluation and Learning Team Leader
+city: Bosaso
+organization: PSI International
 postedAt: 2020-03-25T09:00:00.000Z
 closingAt: 2020-04-19T09:00:00.000Z
-image: ../assets/psi-logo.png
-title: Monitoring, Evaluation, and Learning Team Leader
-organization: PSI International
-tags: ["mogadishu", "bosaso"]
-city: Bosaso
 draft: false
+tags:
+  - mogadishu
+  - bosaso
+image: ../assets/psi-logo.png
 ---
 
 We are Population Services International (PSI) Uganda, a branch office of the world’s leading non-profit social marketing organization. We work to make it easier for people in the developing world to be healthy by providing access to products and services that range from TRUST condoms, maama kits, contraceptives, and water purification products among others
