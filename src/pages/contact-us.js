@@ -5,7 +5,7 @@ import Hero from "../components/hero"
 import Body from "../components/body"
 
 import SEO from "../components/seo"
-import HeroImg from "../svg/undraw_contactus.svg"
+import ContactUs from "../images/contact.png"
 import Map from "../images/google-maps.png"
 
 const IndexPage = () => (
@@ -13,7 +13,7 @@ const IndexPage = () => (
     <SEO title="Contact Us" />
     <Hero
       text="We're on hand to answer your queries and listen to your feedback"
-      image={<HeroImg />}
+      image={<img className="h-48" src={ContactUs} alt="background " />}
     />
     <Body>
       <h1>Contact Us</h1>

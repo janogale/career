@@ -37,11 +37,11 @@ function Index({ data }) {
       /> */}
       <div className="w-full sm:w-4/6 mx-auto">
         <div className=" mb-8">
-          <ul className="flex justify-around">
+          <ul className="flex justify-around flex-wrap">
             {group.map(tag => (
               <li
                 key={tag.fieldValue}
-                className="border-none bg-gray-300 px-3 rounded-lg "
+                className="border-none bg-white	 px-3 py-1 rounded-lg"
               >
                 <Link
                   to={`/tags/${kebabCase(tag.fieldValue)}/`}

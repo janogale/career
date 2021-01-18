@@ -26,7 +26,7 @@ export default function Template({ data, pageContext }) {
             {image && <Img fluid={image} alt="logo" />}
           </div>
           <div className="flex flex-1 flex-col pl-4  justify-start items-baseline">
-            <div className="text-teal-500 pb-2 text-xl leading-tight font-semibold">
+            <div className="text-teal-500 pb-2 text-m leading-tight font-semibold">
               {frontmatter.title}
             </div>
             <div className="flex flex-col sm:flex-row mb-4 md:mb-0 text-tertiary">
@@ -34,11 +34,11 @@ export default function Template({ data, pageContext }) {
               <span className="font-bold">{frontmatter.organization}</span>
               <span className="sm:ml-12">{frontmatter.city}</span>
             </div>
-            <div className="flex flex-col md:flex-row mt-8">
-              <span className="font-light  text-teal-500 bg-gray-200 px-3 py-1 rounded-full  mb-2 ">
+            <div className="flex flex-col md:flex-row mt-8 flex-wrap">
+              <span className="font-light  text-teal-500  px-3 py-1 rounded-full  mb-2 ">
                 posted: {frontmatter.postedAt}
               </span>
-              <span className="font-light text-tertiary bg-gray-200 px-3 py-1 rounded-full  mb-2 md:ml-12">
+              <span className="font-light text-tertiary  px-3 py-1 rounded-full  mb-2 md:ml-12">
                 closing: {frontmatter.closingAt}
               </span>
               <span className="absolute right-0 mr-2 font-semibold text-white  bg-green-600 px-3 rounded-full">
@@ -55,7 +55,7 @@ export default function Template({ data, pageContext }) {
           style={{ height: `1px`, width: `80%` }}
         ></span>
         <div
-          className="w-full md:w-2/3"
+          className="w-full md:w-2/3 "
           dangerouslySetInnerHTML={{ __html: html }}
         />
         <span

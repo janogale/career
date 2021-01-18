@@ -29,6 +29,12 @@ const Header = () => {
         <Link to="/">
           <Logo />
         </Link>
+        <Link
+          to="/"
+          className="text-lg text-green-600	 font-semibold tracking-wide"
+        >
+          Somcareer Jobs
+        </Link>
         <nav className="hidden md:block">
           {pages.map(page => (
             <NavLink key={page.text} to={page.route}>

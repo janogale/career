@@ -3,8 +3,8 @@ import React from "react"
 
 const Header = ({ siteTitle }) => (
   <footer className="bg-secondary font-body flex mt-20">
-    <div className="w-full md:w-4/5 mx-auto text-white flex flex-column flex-wrap py-8">
-      <span className="w-full text-center text-xl">{siteTitle}</span>
+    <div className="w-full md:w-4/5 mx-auto text-white text-s flex flex-column flex-wrap py-8">
+      <span className="w-full text-center text-md">{siteTitle}</span>
 
       <div className="w-full flex items-center justify-center mt-4">
         <span className="">

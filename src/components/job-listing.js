@@ -19,7 +19,7 @@ const PostLink = ({ post: { excerpt, frontmatter } }) => {
               {image && <Img fluid={image} alt="logo" />}
             </div>
             <div className="flex flex-1  flex-col  pl-4  justify-start items-baseline">
-              <div className="text-teal-500 pb-2 text-m leading-tight font-semibold">
+              <div className="text-teal-500 pb-2 text-base leading-tight font-semibold">
                 {frontmatter.title}
               </div>
               <div className="flex flex-1   flex-col sm:flex-row mb-4 md:mb-0">
